@@ -178,32 +178,6 @@ GAN **기반 이미지 복원 모델 연구**
 
 *게임프로그래밍 졸업 (GPA: 3.85 / 4.0)*
 
-# **ETC**
-
-2017.09.01 ~
-
- 2020.04.30
-
-**Dean’s Honor list award**
-
-George Brown College에서 *6학기 모두 우등생 명단에 오름*
-
-2012.12.04 ~
-
- 2014.09.03
-
-**육군 병장 만기 전역**
-
-*운전병*
-
-2007.09.01 ~
-
- 2012.06.30
-
-**캐나다 유학**
-
-*캐나다 중.고등학교 졸업*
-
 <!-- 
 {% include note.html content="If you're cloning this theme, you're probably writing documentation of some kind. I have a blog on technical writing here called <a alt='technical writing blog' href='http://idratherbewriting.com'>I'd Rather Be Writing</a>. If you'd like to stay updated with the latest trends, best practices, and other methods for writing documentation, consider <a href='https://tinyletter.com/tomjoht'>subscribing</a>. I also have a site on <a href='http://idratherbewriting.com/learnapidoc'>writing API documentation</a>." %}
 
