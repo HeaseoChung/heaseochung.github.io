@@ -1,12 +1,210 @@
 ---
-title: "Getting started with the Documentation Theme for Jekyll"
+title: "정해서 | AI Researcher"
 keywords: sample homepage
-tags: [getting_started]
+tags: 
 sidebar: mydoc_sidebar
 permalink: index.html
-summary: These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
+summary: 
 ---
 
+<!-- ![heaseo.jpeg](images/heaseo.jpeg) -->
+
+## Contact
+
+Email: Heaseochung@gmail.com
+
+Phone: 010-6401-1789
+
+## Channel
+
+Github: [http://github.com/heaseochung](http://github.com/heaseochung)
+
+Blog: [https://velog.io/@heaseo](https://velog.io/@heaseo)
+
+## Introduce
+
+2년 차 AI 개발자입니다. Image generation, restoration, object detection, body pose estimation 등 컴퓨터 비전 모델을 연구하고 있습니다. 비즈니스 가치를 창출하기 위해 선행연구 벤치마킹, 응용, 모델 학습 및 추론속도 개선을 서비스에 적용한 경험이 있습니다. 동시에 팀 내 리더로 프로젝트 설계, 코어, 파트 매니징을 업무를 맡고 있습니다.
+
+스스로 발전하는 사람이 되기 위해 부족한 부분을 찾아 기술 및 논문리뷰 등을 개인 블로그에 포스트를 작성하고 배운 것을 팀원과 공유하는 것을 좋아합니다.
+
+## Experience
+
+2020.05.11 ~
+
+ 재직중
+
+1년 8개월
+
+**Espresomedia**
+
+주임연구원
+
+- Object detection 모델 연구 및 상업화
+- GAN 기반 얼굴복원 모델 연구와 학습 파이프라인 개발 및 상업화
+- CNN & GAN 기반 super-resolution 모델 연구와 학습 파이프라인 개발
+- Model Optimization
+- Edge AI (Nvidia Jetson, Xaiver) 환경에서 모델 구현 및 서비스 개발
+- 다중 GPU 학습 및 추론 로직 개발
+- Skill Keywords
+    
+    
+    | Programming Language | Python |  |  |  |
+    | --- | --- | --- | --- | --- |
+    | AI Frameworks | PyTorch | TensorFlow | TensorRT | ONNX |
+    | Model Optimizations | Quantization | Modifying Architecture | Pruning |  |
+    | Other Libs | OpenCV | FFmpeg |  |  |
+    | Utilizations | Git | Docker | Hydra | Wandb |
+
+## Project
+
+2021.11.01 ~
+
+ 2022.01.01
+
+**실시간 테니스 공 트래킹 인공지능 모델 경량화 및 서비스**
+
+- 볼 트래킹 선행연구 모델 탐색
+- Unet 기반의 새로운 tiny ball tracking 모델 개발
+- 볼 트래킹실시간 서비스 응용개발
+    - 모델 추론 테스트 및 OpenCV를 사용한 공의 잔상을 구현
+- 볼 트래킹 모델 경량화
+    - PTQ 양자화 기법으로 추론시간 약 4배 감소
+    - TensorRT 변환을 통해 추론시간 약 2배 감소
+- 실시간 볼 트래킹 서비스 상용화
+
+2021.10.25 ~
+
+ 2021.11.30
+
+**GAN 기반 얼굴복원 모델 연구**
+
+- StyleGAN prior를 decoder로 사용하는 U-net 기반 얼굴복원 모델 개발
+- 학습 파이프라인 설계
+    - Distributed data parallel 학습코드 구현으로 학습속도 최대 5배 개선
+    - 데이터 전처리
+        - Degradation 구현
+        - Data augmentation 구현
+    - 손실함수 코드로 구현
+    - Wandb 으로 모델 학습 모니터링 구현
+    - Hydra와 DVC 으로 모델 버전 관리
+
+2021.06.01 ~
+
+ 2021.09.30
+
+GAN **기반 이미지 복원 모델 연구**
+
+- 이미지 복원 모델 연구 및 선행연구 모델 벤치마킹
+    - RealESRGAN
+    - BSRGAN
+- 학습 파이프라인 설계
+    - Distributed data parallel 학습코드 구현으로 학습속도 최대 5배 개선
+    - 데이터 전처리
+        - Degradation 구현
+        - Data augmentation 구현
+    - 손실함수 코드 구현
+    - Wandb 으로 모델 학습 모니터링 구현
+    - Hydra와 DVC 으로 모델 버전 관리
+- 모델 테스트 코드 설계
+    - FFmpeg-python 을 사용한 모델 테스트 구현
+
+2021.04.01 ~
+
+ 2021.06.31
+
+**CNN 기반 super-resolution 모델 연구 및 경량화**
+
+- EDSR 모델 경량화 및 추론속도 개선
+
+2020.12.02 ~
+
+ 2021.03.30
+
+**Edge AI super-resolution 모델 연구 및 응용프로그램 개발**
+
+- EDSR 모델 경량화 모델 “LDSR” 모델 개발
+    - 모델 아키택처 개선
+        - EDSR의 residual blocks 의 수 감소 및 head & tail 부분에 residual block 추가. 그 결과 기존 EDSR 대비 파라미터 수 1.5배 감소
+        - RGB 3개의 채널 대신 YCBCR 중 “Y” 1개의 채널만 사용해서 파라미터 수 감소
+    - 손실함수 개선
+        - Pixelwise 와 GAN Loss 함수를 사용해서 학습 진행해서 기존 EDSR 모델보다 약 20% 개선된 PSNR 수치 확보
+    - 모델 최적화 모듈 사용
+        - PyTorch 모델을 ONNX 변환 후 TensorRT 모델로 변경
+- Super-resolution 응용프로그램 개발
+    - Pyqt5 으로 UI 설계 및 keyboard & mouse interaction 구현
+    - OpenCV 으로 동영상 및 이미지 소스 처리
+    - 테스트 코드 구현
+
+2020.07.01 ~
+
+ 2020.10.31
+
+**EDSR super-resolution 모델을 Graphcore AI 장비에 이식**
+
+- Graphcore의 PopArt SDK를 사용해서 모델 이식 작업 진행
+    - PyTorch 모델을 ONNX 로 변환
+    - PopArt builder 생성을 통해 ONNX 모델 로드
+    - 모델 가중치 float32 에서 float16 으로 변환
+    - Builder로 생성된 모델을 추론하기 위해 session으로 생성
+    - StepIO에 실제 input 및 empty output 데이터 생성
+    - Session을 통해 모델 추론
+
+## 개인 프로젝트
+
+2022.01.01 ~
+
+**Golf AI Coaching APP with Unity**
+
+- 사용자의 key-points 및 골프 클럽 궤도 estimation 모델 연구
+- 데이터 수집, 전처리, 학습 코드 구현
+- ONNX를 이용한 Restful AI 추론서버 개발
+- 추론서버에서 전달한 관절 및 클럽 궤도 위치정보를 유니티 클라이언트에서 구현
+
+## Education
+
+2022.01.10 ~
+
+ 2023.05.30
+
+**McMaster University, 캐나다**
+
+*소프트웨어 엔지니어링*
+
+2017.09.01 ~
+
+ 2020.04.30
+
+**George Brown College, 캐나다**
+
+*게임프로그래밍 졸업 (GPA: 3.85 / 4.0)*
+
+# **ETC**
+
+2017.09.01 ~
+
+ 2020.04.30
+
+**Dean’s Honor list award**
+
+George Brown College에서 *6학기 모두 우등생 명단에 오름*
+
+2012.12.04 ~
+
+ 2014.09.03
+
+**육군 병장 만기 전역**
+
+*운전병*
+
+2007.09.01 ~
+
+ 2012.06.30
+
+**캐나다 유학**
+
+*캐나다 중.고등학교 졸업*
+
+<!-- 
 {% include note.html content="If you're cloning this theme, you're probably writing documentation of some kind. I have a blog on technical writing here called <a alt='technical writing blog' href='http://idratherbewriting.com'>I'd Rather Be Writing</a>. If you'd like to stay updated with the latest trends, best practices, and other methods for writing documentation, consider <a href='https://tinyletter.com/tomjoht'>subscribing</a>. I also have a site on <a href='http://idratherbewriting.com/learnapidoc'>writing API documentation</a>." %}
 
 ## Build the Theme
@@ -411,4 +609,4 @@ If you want to use an automated system for managing links, see [Automated Links]
 
 The content here is just a getting started guide only. For other details in working with the theme, see the various sections in the sidebar.
 
-{% include links.html %}
+{% include links.html %} -->
