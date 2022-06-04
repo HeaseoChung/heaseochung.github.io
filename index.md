@@ -19,7 +19,7 @@ Phone: 010-6401-1789
 
 Github: [http://github.com/heaseochung](http://github.com/heaseochung)
 
-Blog: [https://velog.io/@heaseo](https://velog.io/@heaseo)
+<!-- Blog: [https://velog.io/@heaseo](https://velog.io/@heaseo) -->
 
 ## Introduce
 
@@ -29,13 +29,8 @@ Blog: [https://velog.io/@heaseo](https://velog.io/@heaseo)
 
 ## Experience
 
-2020.05.11 ~
-
- 재직중
-
-1년 8개월
-
 **Espresomedia**
+**2020.05.11 ~ 재직중 (2년 1개월)**
 
 주임연구원
 
@@ -57,11 +52,8 @@ Blog: [https://velog.io/@heaseo](https://velog.io/@heaseo)
 
 ## Project
 
-2021.11.01 ~
-
- 2022.01.01
-
 **실시간 테니스 공 트래킹 인공지능 모델 경량화 및 서비스**
+**2021.11.01 ~ 2022.01.01**
 
 - 볼 트래킹 선행연구 모델 탐색
 - Unet 기반의 새로운 tiny ball tracking 모델 개발
@@ -72,11 +64,10 @@ Blog: [https://velog.io/@heaseo](https://velog.io/@heaseo)
     - TensorRT 변환을 통해 추론시간 약 2배 감소
 - 실시간 볼 트래킹 서비스 상용화
 
-2021.10.25 ~
-
- 2021.11.30
+<br />
 
 **GAN 기반 얼굴복원 모델 연구**
+**2021.10.25 ~ 2021.11.30**
 
 - StyleGAN prior를 decoder로 사용하는 U-net 기반 얼굴복원 모델 개발
 - 학습 파이프라인 설계
@@ -88,11 +79,10 @@ Blog: [https://velog.io/@heaseo](https://velog.io/@heaseo)
     - Wandb 으로 모델 학습 모니터링 구현
     - Hydra와 DVC 으로 모델 버전 관리
 
-2021.06.01 ~
+<br />
 
- 2021.09.30
-
-GAN **기반 이미지 복원 모델 연구**
+**GAN 기반 이미지 복원 모델 연구**
+**2021.06.01 ~ 2021.09.30**
 
 - 이미지 복원 모델 연구 및 선행연구 모델 벤치마킹
     - RealESRGAN
@@ -108,19 +98,17 @@ GAN **기반 이미지 복원 모델 연구**
 - 모델 테스트 코드 설계
     - FFmpeg-python 을 사용한 모델 테스트 구현
 
-2021.04.01 ~
-
- 2021.06.31
+<br />
 
 **CNN 기반 super-resolution 모델 연구 및 경량화**
+**2021.04.01 ~ 2021.06.31**
 
 - EDSR 모델 경량화 및 추론속도 개선
 
-2020.12.02 ~
-
- 2021.03.30
+<br />
 
 **Edge AI super-resolution 모델 연구 및 응용프로그램 개발**
+**2020.12.02 ~ 2021.03.30**
 
 - EDSR 모델 경량화 모델 “LDSR” 모델 개발
     - 모델 아키택처 개선
@@ -135,11 +123,10 @@ GAN **기반 이미지 복원 모델 연구**
     - OpenCV 으로 동영상 및 이미지 소스 처리
     - 테스트 코드 구현
 
-2020.07.01 ~
-
- 2020.10.31
+<br />
 
 **EDSR super-resolution 모델을 Graphcore AI 장비에 이식**
+**2020.07.01 ~ 2020.10.31**
 
 - Graphcore의 PopArt SDK를 사용해서 모델 이식 작업 진행
     - PyTorch 모델을 ONNX 로 변환
@@ -149,7 +136,7 @@ GAN **기반 이미지 복원 모델 연구**
     - StepIO에 실제 input 및 empty output 데이터 생성
     - Session을 통해 모델 추론
 
-## 개인 프로젝트
+<!-- ## 개인 프로젝트
 
 2022.01.01 ~
 
@@ -158,23 +145,17 @@ GAN **기반 이미지 복원 모델 연구**
 - 사용자의 key-points 및 골프 클럽 궤도 estimation 모델 연구
 - 데이터 수집, 전처리, 학습 코드 구현
 - ONNX를 이용한 Restful AI 추론서버 개발
-- 추론서버에서 전달한 관절 및 클럽 궤도 위치정보를 유니티 클라이언트에서 구현
+- 추론서버에서 전달한 관절 및 클럽 궤도 위치정보를 유니티 클라이언트에서 구현 -->
 
 ## Education
 
-2022.01.10 ~
-
- 2023.05.30
-
 **McMaster University, 캐나다**
+<!-- **2022.01.10 ~ 2023.05.30** -->
 
 *소프트웨어 엔지니어링*
 
-2017.09.01 ~
-
- 2020.04.30
-
 **George Brown College, 캐나다**
+<!-- *2017.09.01 ~ 2020.04.30* -->
 
 *게임프로그래밍 졸업 (GPA: 3.85 / 4.0)*
 
