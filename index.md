@@ -42,13 +42,11 @@ Github: [http://github.com/heaseochung](http://github.com/heaseochung)
 - 다중 GPU 학습 및 추론 로직 개발
 - Skill Keywords
     
-    
-    | Programming Language | Python |  |  |  |
-    | --- | --- | --- | --- | --- |
-    | AI Frameworks | PyTorch | TensorFlow | TensorRT | ONNX |
-    | Model Optimizations | Quantization | Modifying Architecture | Pruning |  |
-    | Other Libs | OpenCV | FFmpeg |  |  |
-    | Utilizations | Git | Docker | Hydra | Wandb |
+    | `Programming Languages` | Python | C++ |  |  |
+    | `AI Frameworks` | PyTorch | TensorFlow | TensorRT | ONNX |
+    | `Model Optimizations` | Quantization | Modifying Architecture | Pruning |  |
+    | `Other Libs` | OpenCV | FFmpeg | Numpy |  |
+    | `Utilizations` | Git | Docker | Hydra | Wandb |
 
 ## Project
 

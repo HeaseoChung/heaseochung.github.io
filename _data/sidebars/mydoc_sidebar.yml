@@ -52,6 +52,14 @@ entries:
     - title: GPEN
       url: /GPEN.html
       output: web, pdf
+    
+    - title: StyleGAN
+      url: /StyleGAN.html
+      output: web, pdf
+    
+    - title: BSRGAN
+      url: /BSRGAN.html
+      output: web, pdf
 
     - title: EDSR
       url: /EDSR.html
