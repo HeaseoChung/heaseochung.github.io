@@ -52,7 +52,11 @@ entries:
     - title: GPEN
       url: /GPEN.html
       output: web, pdf
-    
+
+    - title: StyleGAN2
+      url: /StyleGAN2.html
+      output: web, pdf
+
     - title: StyleGAN
       url: /StyleGAN.html
       output: web, pdf
