@@ -7,18 +7,6 @@ permalink: index.html
 summary: 
 ---
 
-<!-- ![heaseo.jpeg](images/heaseo.jpeg) -->
-
-## Contact
-
-Email: Heaseochung@gmail.com
-
-Phone: 010-6401-1789
-
-## Channel
-
-Github: [http://github.com/heaseochung](http://github.com/heaseochung)
-
 <!-- Blog: [https://velog.io/@heaseo](https://velog.io/@heaseo) -->
 
 ## Introduce
@@ -156,6 +144,15 @@ Github: [http://github.com/heaseochung](http://github.com/heaseochung)
 <!-- *2017.09.01 ~ 2020.04.30* -->
 
 *게임프로그래밍*
+
+
+## Contact
+
+Email: Heaseochung@gmail.com
+
+Phone: 010-6401-1789
+
+Github: [http://github.com/heaseochung](http://github.com/heaseochung)
 
 <!-- 
 {% include note.html content="If you're cloning this theme, you're probably writing documentation of some kind. I have a blog on technical writing here called <a alt='technical writing blog' href='http://idratherbewriting.com'>I'd Rather Be Writing</a>. If you'd like to stay updated with the latest trends, best practices, and other methods for writing documentation, consider <a href='https://tinyletter.com/tomjoht'>subscribing</a>. I also have a site on <a href='http://idratherbewriting.com/learnapidoc'>writing API documentation</a>." %}
