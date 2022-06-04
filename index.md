@@ -1,5 +1,5 @@
 ---
-title: "정해서 | AI Researcher"
+title: "정해서 | AI Engineer"
 keywords: sample homepage
 tags: 
 sidebar: mydoc_sidebar
@@ -10,11 +10,10 @@ summary:
 <!-- Blog: [https://velog.io/@heaseo](https://velog.io/@heaseo) -->
 
 ## Introduce
-
-- 안녕하세요! 3년 차 AI 엔지니어 정해서 입니다. 
-- 주로 Image generation, restoration, object detection, body pose estimation 등 컴퓨터 비전 모델들을 연구하고 있습니다.
-- 비즈니스 가치를 창출하기 위해 선행연구 벤치마킹, 응용, 모델 학습 및 추론속도 개선을 서비스에 적용한 경험이 있습니다. 
-- 동시에 팀 내 리더로 프로젝트 설계, 코어, 파트 매니징을 업무를 맡고 있습니다.
+안녕하세요! 3년 차 AI Engineer 정해서 입니다. <br />
+주로 Image generation, restoration, object detection, body pose estimation 등 컴퓨터 비전 모델들을 연구하고 있습니다. <br />
+비즈니스 가치를 창출하기 위해 선행연구 벤치마킹, 응용, 모델 학습 및 추론속도 개선을 서비스에 적용한 경험이 있습니다. <br />
+동시에 팀 내 리더로 프로젝트 설계, 코어, 파트 매니징을 업무를 맡고 있습니다. <br />
 
 *스스로 발전하는 사람이 되기 위해 부족한 부분을 찾아 기술 및 논문리뷰 등을 개인 블로그에 포스트를 작성하고 배운 것을 팀원과 공유하는 것을 좋아합니다.*
 
