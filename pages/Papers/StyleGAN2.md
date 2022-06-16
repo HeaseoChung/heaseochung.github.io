@@ -5,7 +5,7 @@ keywords:
 summary: "StyleGAN V2는 기존의 V1 모델을 향상시킨것이다. CNN 모델의 가중치를 AdaIN 대신 일반적인 정규화를 하고 Progressive Growing 제거해서 부자연스러운 물방울 현상 개선했으며 latent space에 지속성을 제공해서 이미지의 품질을 향상시켰다."
 sidebar: mydoc_sidebar
 permalink: StyleGAN2.html
-folder: mydoc
+folder: Papers
 ---
 
 ## Introduction

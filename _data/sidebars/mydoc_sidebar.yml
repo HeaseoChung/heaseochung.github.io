@@ -49,6 +49,10 @@ entries:
     output: web, pdf
     folderitems:
 
+    - title: SCUNet
+      url: /SCUNet.html
+      output: web, pdf
+
     - title: GPEN
       url: /GPEN.html
       output: web, pdf

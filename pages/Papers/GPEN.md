@@ -5,7 +5,7 @@ keywords:
 summary: "열화가 심한 이미지에서 사람의 얼굴을 복원(Blind Face Restoration) 하는 것은 대단히 어려운 일이다. 알 수 없고 복잡한 방법으로 열화가 생긴 이미지를 non-blind 방법으로 학습한 deep neural network (DNN) 모델로 결과를 보면 참담하다. 다행히도 Generative adversarial network (GAN) 기반 방법이 조금 더 나은 결과를 보여주지만 너무 그림같이 이미지를 생성하는 경향이있다. 그래서 이 논문은 처음으로 U-shaped DNN과 GAN을 이용한 사람 얼굴 복원 모델을 새로운 방법으로 제안한다. 이 모델은 global face structure, local face details 그리고 background를 조절해서 현실같은 얼굴을 생성한다."
 sidebar: mydoc_sidebar
 permalink: GPEN.html
-folder: mydoc
+folder: Papers
 ---
 
 

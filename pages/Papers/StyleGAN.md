@@ -5,7 +5,7 @@ keywords:
 summary: "A Style-Based Generator Architecture for Generative Adversarial Networks"
 sidebar: mydoc_sidebar
 permalink: StyleGAN.html
-folder: mydoc
+folder: Papers
 ---
 
 ## Introduction
