@@ -58,21 +58,20 @@ JPEG 압축 노이즈 같은 경우 사진의 파일 사이즈를 줄일 때 생
 <br />
 
 ## Experiments
-### 학습방법
 
-#### 데이터 셋 구성
+### 데이터 셋 구성
 - DIV2K
 - Flick2K
 
-#### Loss
+### Loss
 - L1 loss
 
-#### Optimizer
+### Optimizer
 - Adam optimizer
 - Start learning rate: 1e-4
 - Decays by a factor: 0.5 every 200,000 iterations
 
-#### Patch & Batch size
+### Patch & Batch size
 - Patch size: 128x128
 - Batch size: 24
 
