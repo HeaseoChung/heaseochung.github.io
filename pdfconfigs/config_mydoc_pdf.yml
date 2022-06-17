@@ -3,7 +3,7 @@ url: "http://127.0.0.1:4010"
 baseurl: "/mydoc-pdf"
 port: 4010
 product: mydoc
-print_title: Jekyll theme for documentation — mydoc product
+print_title: Heaseo Chung
 print_subtitle: version 6.0
 output: pdf
 defaults:

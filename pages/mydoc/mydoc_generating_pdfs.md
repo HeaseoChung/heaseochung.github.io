@@ -81,7 +81,7 @@ baseurl: "/mydoc-pdf"
 port: 4010
 output: pdf
 product: mydoc
-print_title: Jekyll theme for documentation — mydoc product
+print_title: Heaseo Chung
 print_subtitle: version 5.0
 output: pdf
 defaults:
