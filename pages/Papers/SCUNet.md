@@ -22,8 +22,6 @@ n의 일반적인 가정은 AWGN, JPEG 압축, 푸아송 노이즈 및 카메라
 ## Method
 일반적으로 deep blind model의 경우 깨끗한 이미지와 열화 이미지가 쌍으로 이루어진 데이터 셋을 사용한다. 그리고 여러번의 MAP(Maximum A Posteriori) 문제를 최적화 알고리즘으로 풀어 열화 이미지로 부터 깨끗한 이미지를 얻을 수 있도록 학습을 시킨다. 학습에서 가장 키 포인트는 인공지능이 degradation process 의 패턴을 잘 인지하는 것이다. 일반적으로 패턴을 잘 인지하기 위해 네트워크 아키택처 설계, 모델의 크기 (파라미터의 수), 훈련 데이터에 따라 달라진다.
 
-<br />
-
 ### Swin-Conv-UNet
 <p align="center">
   <img width="" height="" src="images/SCUNet/SCUNET_ARCH.png">
@@ -57,6 +55,8 @@ JPEG 압축 노이즈 같은 경우 사진의 파일 사이즈를 줄일 때 생
 #### Resizing
 리사이징 같은 경우 깨끗한 이미지에 노이즈를 발생시키지 않지만 노이즈가 있는 이미지의 노이즈 분포에 영향을 미친다. 예로 업스케일링은 AWGN이 공간적으로 상관되도록 하는 반면, 다운스케일링은 처리된 카메라 센서 노이즈를 신호 의존성이 덜하도록 한다.
 
+<br />
+
 ## Experiments
 ### 학습방법
 
@@ -76,6 +76,8 @@ JPEG 압축 노이즈 같은 경우 사진의 파일 사이즈를 줄일 때 생
 - Patch size: 128x128
 - Batch size: 24
 
+<br />
+
 ## Results
 
 <p align="center">
@@ -85,6 +87,8 @@ JPEG 압축 노이즈 같은 경우 사진의 파일 사이즈를 줄일 때 생
 <p align="center">
   <img width="" height="" src="images/SCUNet/SCUNET_Model_Size.png">
 </p>
+
+<br />
 
 ## Reference
 [SCUNET 논문](https://arxiv.org/pdf/2203.13278.pdf)
