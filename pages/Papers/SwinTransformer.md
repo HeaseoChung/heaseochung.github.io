@@ -68,7 +68,7 @@ Swin Transformer는 트랜스포머 블록의 표준 MSA(multi-head self attenti
   <img width="" height="" src="images/SwinTransformer/SwinTransformer_shifted_window_partitioning.png">
 </p>
 
-Shifted window partitioning approcach 는 window 기반의 multi-head self-attention W-MSA 와 SW-MSA 모듈을 통해 이전 계층의 겹치지 않는 인접 window 사이의 연결을 도와준다.
+Shifted window partitioning approcach 는 SW-MSA 모듈을 통해 이전 계층의 겹치지 않는 인접 window 사이의 연결을 도와주고 self-attention을 진행할 수 있게 도와준다.
 
 
 ### Efficient batch computation for shifted configuration
