@@ -53,6 +53,10 @@ entries:
       url: /SCUNet.html
       output: web, pdf
 
+    - title: Swin Transformer
+      url: /SwinTransformer.html
+      output: web, pdf
+
     - title: GPEN
       url: /GPEN.html
       output: web, pdf
