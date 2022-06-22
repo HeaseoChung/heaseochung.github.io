@@ -77,4 +77,4 @@ Shifted window partitioning approcach 는 window 기반의 multi-head self-atten
   <img width="" height="" src="images/SwinTransformer/SwinTransformer_efficient_batch_computation_approach.png">
 </p>
 
-Shifted window partitioning 에서 추가 된 window의 수가 증가할 때 추가 된 window의 크기가 이전에 생성된 것보다 작아 문제를 생길 수 있다. 이 점을 보완하기 위해 위의 그림처럼 efficient batch computatoin approach 을 소개를 한다. 이 방식은 왼쪽 상단 방향으로 순환 이동하는 방식이다. 이동 후 일괄 처리된 창은 feature map에서 인접하지 않은 여러 하위 창으로 구성될 수 있으므로 masking mechanism을 사용하여 각 하위 윈도우 내에서 self attention 연산을 제한한다. Cyclic-shift를 사용하면 배치 윈도우의 수가 일반 윈도우 분할과 동일하게 유지되므로 효율적이다.
+Shifted window partitioning 에서 window의 수가 증가할 때 추가 된 window의 크기가 이전에 생성된 것보다 작아 문제를 생길 수 있다. 이 점을 보완하기 위해 위의 그림처럼 efficient batch computatoin approach 을 소개를 한다. 이 방식은 왼쪽 상단 방향으로 순환 이동하는 방식이다. 이동 후 일괄 처리된 창은 feature map에서 인접하지 않은 여러 하위 창으로 구성될 수 있으므로 masking mechanism을 사용하여 각 하위 윈도우 내에서 self attention 연산을 제한한다. Cyclic-shift를 사용하면 배치 윈도우의 수가 일반 윈도우 분할과 동일하게 유지되므로 효율적이다.
