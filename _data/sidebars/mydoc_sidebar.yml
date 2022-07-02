@@ -1,82 +1,82 @@
 # This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
 
 entries:
-- title: sidebar
-  product: 
-  version: 
-  folders:
+  - title: sidebar
+    product:
+    version:
+    folders:
+      - title:
+        output: pdf
+        type: frontmatter
+        folderitems:
+          - title:
+            url: /titlepage.html
+            output: pdf
+            type: frontmatter
+          - title:
+            url: /tocpage.html
+            output: pdf
+            type: frontmatter
 
-  - title:
-    output: pdf
-    type: frontmatter
-    folderitems:
-    - title:
-      url: /titlepage.html
-      output: pdf
-      type: frontmatter
-    - title:
-      url: /tocpage.html
-      output: pdf
-      type: frontmatter
+      - title: About me
+        output: web, pdf
 
-  - title: About me
-    output: web, pdf
-    
-    folderitems:
+        folderitems:
+          - title: Introduction
+            url: /index.html
+            output: web, pdf
+            type: homepage
 
-    - title: Introduction
-      url: /index.html
-      output: web, pdf
-      type: homepage
+        # - title: Introduction
+        #   url: /mydoc_introduction.html
+        #   output: web, pdf
 
-    # - title: Introduction
-    #   url: /mydoc_introduction.html
-    #   output: web, pdf
+        # - title: Supported features
+        #   url: /mydoc_supported_features.html
+        #   output: web, pdf
 
-    # - title: Supported features
-    #   url: /mydoc_supported_features.html
-    #   output: web, pdf
+        # - title: About the theme author
+        #   url: /mydoc_about.html
+        #   output: web, pdf
 
-    # - title: About the theme author
-    #   url: /mydoc_about.html
-    #   output: web, pdf
+        # - title: Support
+        #   url: /mydoc_support.html
+        #   output: web, pdf
 
-    # - title: Support
-    #   url: /mydoc_support.html
-    #   output: web, pdf
+      - title: Paper reviews
+        output: web, pdf
+        folderitems:
+          - title: SCUNet
+            url: /SCUNet.html
+            output: web, pdf
 
-  - title: Paper reviews
-    output: web, pdf
-    folderitems:
+          - title: Swin Transformer
+            url: /SwinTransformer.html
+            output: web, pdf
 
-    - title: SCUNet
-      url: /SCUNet.html
-      output: web, pdf
+          - title: RealESRGAN
+            url: /RealESRGAN.html
+            output: web, pdf
 
-    - title: Swin Transformer
-      url: /SwinTransformer.html
-      output: web, pdf
+          - title: GPEN
+            url: /GPEN.html
+            output: web, pdf
 
-    - title: GPEN
-      url: /GPEN.html
-      output: web, pdf
+          - title: StyleGAN2
+            url: /StyleGAN2.html
+            output: web, pdf
 
-    - title: StyleGAN2
-      url: /StyleGAN2.html
-      output: web, pdf
+          - title: StyleGAN
+            url: /StyleGAN.html
+            output: web, pdf
 
-    - title: StyleGAN
-      url: /StyleGAN.html
-      output: web, pdf
-    
-    - title: BSRGAN
-      url: /BSRGAN.html
-      output: web, pdf
+          - title: BSRGAN
+            url: /BSRGAN.html
+            output: web, pdf
 
-    - title: EDSR
-      url: /EDSR.html
-      output: web, pdf
-
+          - title: EDSR
+            url: /EDSR.html
+            output: web, pdf
 #     - title: 5.0 Release notes
 #       url: /mydoc_release_notes_50.html
 #       output: web, pdf
