@@ -179,4 +179,4 @@ Real-ESRGAN은 폭 넓은 열화를 가진 저해상도 이미지를 복원해�
 
 ## Github
 
-[RealESRGAN by Heaseo Chung](https://github.com/HeaseoChung/Super-resolution/tree/master/archs/RealESRGAN)
+[RealESRGAN by Heaseo Chung](https://github.com/HeaseoChung/Super-resolution)
