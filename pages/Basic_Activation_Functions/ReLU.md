@@ -66,7 +66,7 @@ x < 0 일 때 음수의 값이 들어오므로 활성화 함수의 평균 출력
 
 ## SELU
 
-SELU는 ELU 함수에 scale 값이 추가된 함수이다.
+Scaled Exponential Linear Unit은 ELU 함수에 scale 값이 추가된 함수이다.
 
 <p align="center">
   <img width="" height="" src="images/ReLU/SELU_graph.png">
@@ -77,3 +77,17 @@ SELU는 ELU 함수에 scale 값이 추가된 함수이다.
 </p>
 
 2개의 파라미터를 사용하여 학습을 시키면, 활성화 함수의 분산이 일정하게 나와 성능이 좋아진다고 한다. 하지만 알파 값에 따라 활성화 함수의 결괏값이 일정하지 않아 층을 많이 쌓을 수 없는 단점이 있다.
+
+## GELU
+
+Gaussian Error Linear Unit은 NLP 분야에서 많이 사용된 활성화 함수이다. 최근에 computer vision 분야에서도 self-attention 기반의 Vision Transformer(ViT)가 SOTA 를 달성하면서 언어 뿐만 아니라 비전쪽에서도 많이 사용된다.
+
+<p align="center">
+  <img width="" height="" src="images/ReLU/GELU_graph.png">
+</p>
+
+<p align="center">
+  <img width="" height="" src="images/ReLU/GELU_formula.png">
+</p>
+
+GELU 또한 Dying ReLU 를 개선하고자 네트워크가 깊어질수록 adaptive dropout 형태로 입력치에 가중치를 부여해서 Dying ReLU를 개선한다.
