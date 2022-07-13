@@ -50,6 +50,10 @@ entries:
             url: /ReLU.html
             output: web, pdf
 
+          - title: Sigmoid
+            url: /Sigmoid.html
+            output: web, pdf
+
       - title: Paper reviews
         output: web, pdf
         folderitems:
