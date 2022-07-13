@@ -43,6 +43,13 @@ entries:
         #   url: /mydoc_support.html
         #   output: web, pdf
 
+      - title: Basic Activation Functions
+        output: web, pdf
+        folderitems:
+          - title: ReLU
+            url: /ReLU.html
+            output: web, pdf
+
       - title: Paper reviews
         output: web, pdf
         folderitems:
