@@ -46,12 +46,12 @@ entries:
       - title: Basic Activation Functions
         output: web, pdf
         folderitems:
-          - title: ReLU
-            url: /ReLU.html
-            output: web, pdf
-
           - title: Sigmoid
             url: /Sigmoid.html
+            output: web, pdf
+
+          - title: ReLU
+            url: /ReLU.html
             output: web, pdf
 
       - title: Paper reviews
