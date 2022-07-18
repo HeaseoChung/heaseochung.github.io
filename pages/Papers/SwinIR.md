@@ -51,7 +51,7 @@ Residual Swin Transformer Block (RSTB) 은 Swin Transformer layers (STL) 과 con
 #### Swin Transformer layer
 
 <p align="center">
-  <img width="" height="" src="images/SwinIR/STL.png">
+  <img width="" height="" src="images/SwinIR/stl.png">
 </p>
 
 Swin Transformer Layer (STL) 은 본래 transformer 에서 사용하는 multi-head self-attention 을 기반으로 만들어졌다. 차이점은 local attention 과 shifted window mechanism 정도이다. $$ H*W*C \longrightarrow \frac {HW}{M^2}*M ^2*C$$
@@ -73,3 +73,41 @@ $$ X = MLP(LN(X)) + X $$
 MSA 와 MLP 를 수행하기 이전에 LayerNorm (LN) 하고 이후에는 residual connection 도 추가된다.
 
 Shifted window mechanism 같은 경우 partition 의 사이즈가 고정일 때, local window 들간에 connection 이 없어 정보 교환이 어려울 때 사용된다. 예로 feature 를 나누기 전에 M/2 만큼 픽셀을 shifting 시켜 사용한다.
+
+## Experiments
+
+Image restoration 의 사용목적에 따라 모델의 하이퍼파라미터 (RSTB, STL, window size, embed dim and attention head 의 수)가 달라진다. 일반적으로 RSTB 6개, STL 6개, window size 8개, embed dim 180 개, attention head 6개를 사용한다. 주의할 점은 window 사이즈가 8개를 초과할 경우 모델의 성능이 급격하게 떨어진다고 한다.
+
+## Ablation Study
+
+<p align="center">
+  <img width="" height="" src="images/SwinIR/SwinIR_Graph.png">
+</p>
+
+### Impact of channel number, RSTB number and STL number
+
+위의 그래프를 보면 SwinIR 의 성능은 channel number (embed dim), RSTB 그리고 STL 수의 따라 좌지우지한다. 특히 channel number 같은 경우 수가 증가함에 따라 모델의 성능도 꾸준히 증가하지만 파라미터의 수도 급격하게 증가한다. 반면에 RSTB 와 STL 수의 증가에 따라 성능이 서서히 증가하다가 멈춘다.
+
+### Impact of patch size and training image number; model convergence comparison
+
+SwinIR 이 CNN 기반의 모델과 비교했을 때 장/단점들을 평가하고자 RCAN 모델을 사용했다. SwinIR 과 RCAN 모델 모두 학습을 할 때 이미지의 패치 사이즈가 커질때 PSNR 의 값도 올라가는 것을 확인할 수 있었다. 또한 데이터 셋이 증가함에 따라 두 모델의 성능도 증가하였다. 하지만 동일한 패치사이즈와 데이터 셋을 가지고 학습을 진행한 모델끼리 비교했을 때 SwinIR 의 성능이 일반적인 CNN 모델보다 우세한 것을 확인할 수 있었다. 또한 다른 transformer 모델들과 다르게 SwinIR 은 학습할 때 수렴하는 구간까지 도달하는 시점이 SwinIR 이 RCAN 보다 더 빨랐다.
+
+### Impact of residual connection and convolutoin layer in RSTB
+
+<p align="center">
+  <img width="" height="" src="images/SwinIR/SwinIR_Graph2.png">
+</p>
+
+위에 그래프를 보면 Self-attention 이후의 layer 와 skip connection의 유무 conv 의 수에 따라 성능이 달라진다.
+
+## Conclusion
+
+본 논문은 이미지 복원을 위해 트랜스포머 기반의 SwinIR 을 연구하고 개발했다. 이 모델의 경우 shallow feature extracion, deep feature extraction 그리고 HR reconstruction module 을 포함하고 있다. Swin Transformer layers (STL), conv layer 그리고 residual connection 을 포함하는 Residual Swin Transformer blocks (RSTB) 을 사용해 deep feature 를 추출해 기존의 CNN 모델들보다 월등한 성능을 보여준다. 또한 다른 셋팅의 하이퍼파라미터와 학습방법을 통해 classic image SR, lightweight image SR, real-world image SR, grayscale image denoising, color image denoising 그리고 JPEG compression artifacts 을 제거하는 모델로 확장 할 수도 있다.
+
+## Github
+
+[SwinIR by Heaseo Chung](https://github.com/HeaseoChung/Super-resolution)
+
+## Reference
+
+[SwinIR 논문](https://arxiv.org/pdf/2108.10257.pdf)
