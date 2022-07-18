@@ -60,3 +60,7 @@ EDSR은 DIV2K 800개의 트레이닝 데이터셋과 100개의 테스트셋을 �
 ## Github
 
 [EDSR by Heaseo Chung](https://github.com/HeaseoChung/Super-resolution)
+
+## Reference
+
+[EDSR 논문](https://arxiv.org/pdf/1707.02921.pdf)

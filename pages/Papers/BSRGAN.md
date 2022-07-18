@@ -143,3 +143,7 @@ Blur는 이미지를 열화시키는 가장 기본적인 방법 중 하나이다
 ## Github
 
 [BSRGAN by Heaseo Chung](https://github.com/HeaseoChung/Super-resolution)
+
+## Reference
+
+[RealESRGAN 논문](https://arxiv.org/pdf/2103.14006.pdf)

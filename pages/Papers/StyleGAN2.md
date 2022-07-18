@@ -1,6 +1,6 @@
 ---
 title: StyleGAN2
-tags: 
+tags:
 keywords:
 summary: "StyleGAN V2는 기존의 V1 모델을 향상시킨것이다. CNN 모델의 가중치를 AdaIN 대신 일반적인 정규화를 하고 Progressive Growing 제거해서 부자연스러운 물방울 현상 개선했으며 latent space에 지속성을 제공해서 이미지의 품질을 향상시켰다."
 sidebar: mydoc_sidebar
@@ -16,7 +16,7 @@ StyleGAN은 고해상도의 이미지를 현실적으로 생성한다. 하지만
   <img width="" height="" src="https://images.velog.io/images/heaseo/post/fa8cd4cd-b240-4ead-ba00-27b5b8229415/StyleGAN_artifacts.png">
 </p>
 
-빨간 동그라미로 표시된 노이즈는 항상 발생되는 것은 아니지만 특정 해상도 64x64에 모든 feature maps에서 발생된다. 논문의 저자는 normalization layer (AdaIN) 때문에 생성되는 것이라고 생각하고 있다. 스파이크 유형 분포가 작은 feature map에 들어오면 원래 값이 작더라도 AdaIN에 의해 값이 증가하여 큰 영향을 준다. 
+빨간 동그라미로 표시된 노이즈는 항상 발생되는 것은 아니지만 특정 해상도 64x64에 모든 feature maps에서 발생된다. 논문의 저자는 normalization layer (AdaIN) 때문에 생성되는 것이라고 생각하고 있다. 스파이크 유형 분포가 작은 feature map에 들어오면 원래 값이 작더라도 AdaIN에 의해 값이 증가하여 큰 영향을 준다.
 
 다음은 부자연스러운 부분에 대한 지적이다. 때때로 생성된 이미지의 작은 특성들이 얼굴의 각도가 달라졌음에도 불구하고 고정된 방향성을 가지고 있어서 부자연스럽게 보인다. 이 논문의 저자는 아마 이러한 부자연스러움이 progressive growing에서 비롯된 것이라고 한다. Progressive growing에서 각 해상도에서 이미지를 독립적으로 생성한 것이 문제였던 것이다.
 
@@ -29,9 +29,11 @@ StyleGAN2는 이러한 문제점을 해결하기 위해 PPL과 향상된 droplet
 <br />
 
 ## StyleGAN2
-StyleGAN V2는 기존의 V1 모델을 향상시킨것이다. CNN 모델의 가중치를 AdaIN 대신 일반적인 정규화를 하고 Progressive Growing 제거해서 부자연스러운 물방울 현상 개선했으며 latent space에 지속성을 제공해서 이미지의 품질을 향상시켰다. 
 
-*Key Insights*
+StyleGAN V2는 기존의 V1 모델을 향상시킨것이다. CNN 모델의 가중치를 AdaIN 대신 일반적인 정규화를 하고 Progressive Growing 제거해서 부자연스러운 물방울 현상 개선했으며 latent space에 지속성을 제공해서 이미지의 품질을 향상시켰다.
+
+_Key Insights_
+
 - AdaIN normalize 대신 estimated statistics of the data(추정 통계)을 normalize을 해서 물방울 현상을 지운다.
 - Progressive Growing 대신 skip connection을 갖고 계층 생성자를 이용해서 부자연스러웠던 눈, 이(teeth)의 방향을 제데로 잡는다.
 - PPL의 값을 줄이고 latent space 매끄럽게 적용해서 이미지의 품질을 향상시킨다.
@@ -41,22 +43,26 @@ StyleGAN V2는 기존의 V1 모델을 향상시킨것이다. CNN 모델의 가�
 ### StyleGAN2's methods
 
 #### Normalization method instread of AdaIN
+
 AdaIN은 statistics of the data(실제 통계)를 input으로 사용해서 정규화를 하는데 이 작업이 물방울 현상(droplet modes) 만든다. 이러한 물방울 현상을 방지하기 위해 저자는 convolution의 가중치를 estimated statistics(추정 통계)을 사용해 정규화 함으로써 물방울 현상을 방지한다.
 
 <p align="center">
   <img width="" height="" src="https://images.velog.io/images/heaseo/post/49ffafe7-f219-4744-bd58-139414f87783/StyleGANV2.png">
 </p>
 
-AdaIN은 자세히 설명하면 2개의 스텝으로 나누어질 수 있다. 
+AdaIN은 자세히 설명하면 2개의 스텝으로 나누어질 수 있다.
+
 1. content information을 정규화
 2. style information을 사용해 정규환된 content information을 linear trasition
-StyleGAN(a)의 AdaIN부분이 위 처럼 확장된다면 (b)와 같이 된다.
+   StyleGAN(a)의 AdaIN부분이 위 처럼 확장된다면 (b)와 같이 된다.
 
 AdaIN의 내부모습
+
 - normalization of content
 - linear transformation by style vector
 
 Style block 내부모습
+
 - linear transformation by style vector
 - Convolution
 - normalization of content
@@ -75,7 +81,7 @@ Style block 내부모습
   <img width="" height="" src="https://images.velog.io/images/heaseo/post/3cabcb4a-ce92-45a6-bc4b-c172f04c726c/Mod_formular2.png">
 </p>
 
-위의 수식으로, 스타일 블록의 작업 순서는 스타일에 의한 linear transformation -> convolution -> output normalization이 하나의 convolutoin process로 표현될 수 있다. 정규화 부분은 출력이 정규 분포라고 가정한 정규화 과정이다. 이 과정으로 물방울 문제를 야기하는 실제 분포를 사용하는 대신 이 같은 정규 분포를 사용해서 방지한다. 
+위의 수식으로, 스타일 블록의 작업 순서는 스타일에 의한 linear transformation -> convolution -> output normalization이 하나의 convolutoin process로 표현될 수 있다. 정규화 부분은 출력이 정규 분포라고 가정한 정규화 과정이다. 이 과정으로 물방울 문제를 야기하는 실제 분포를 사용하는 대신 이 같은 정규 분포를 사용해서 방지한다.
 
 <p align="center">
   <img width="" height="" src="https://images.velog.io/images/heaseo/post/3d9358cb-734d-4638-ad2f-b6fa5daa0ca7/droplet_mode_prevent.png">
@@ -84,6 +90,7 @@ Style block 내부모습
 <br />
 
 ### A high-resolution image generation method instead of Progressive Growing
+
 기존의 StyleGAN 생성자는 단순한 구조를 가지고 있었다. Progressive Growing 없이 고해상도의 이미지를 만드는 어려움이 있었다. 하지만 생성자와 식별자의 표현 능력 증가로 Progressive Growing없이 고해상도 이미지를 만드는 것이 가능해보였다.
 
 Progressive growing은 점차적으로 생성자와 식별자를 추가해서 고해상도 이미지는 생성하는 가장 보편적인 방식이다. 하지만 각 생성자가 독립적이기 때문에 frequent features를 만들어 사람의 이의 방향성이 항상 고정되어 있는 부자연스러움을 연출시킨다.
@@ -125,6 +132,7 @@ Progressive growing은 점차적으로 생성자와 식별자를 추가해서 �
 <br />
 
 ### Path Length Regularization to smooth latent space
+
 저자는 latent space의 지각적 매끄러움을 나타내는 PPL과 이미지 품질 사이에 상관관계가 있을 수 있다는 것을 알아냈기 때문에 regularization term으로 통합했다. 수식은 아래와 같다.
 
 <p align="center">
@@ -165,8 +173,12 @@ $$a$$는 상수 값이고 $$y$$는 정규 분포로부터 생성된 랜덤 값�
   <img width="" height="" src="https://images.velog.io/images/heaseo/post/db08ce5e-f2d7-4d40-8108-331f684d0bac/preds_174.jpg">
 </p>
 
-
 <br />
 
 ## Github
+
 [StyleGAN2 github by Heaseo Chung](https://github.com/HeaseoChung/StyleGAN2-PyTorch)
+
+## Reference
+
+[StyleGAN2 논문](https://arxiv.org/pdf/1912.04958.pdf)
