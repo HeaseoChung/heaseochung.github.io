@@ -57,6 +57,10 @@ entries:
       - title: Paper reviews
         output: web, pdf
         folderitems:
+          - title: SwinIR
+            url: /SwinIR.html
+            output: web, pdf
+
           - title: SCUNet
             url: /SCUNet.html
             output: web, pdf
