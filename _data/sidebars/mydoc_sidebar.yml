@@ -27,17 +27,6 @@ entries:
             output: web, pdf
             type: homepage
 
-      - title: Basic Activation Functions
-        output: web, pdf
-        folderitems:
-          - title: Sigmoid
-            url: /Sigmoid.html
-            output: web, pdf
-
-          - title: ReLU
-            url: /ReLU.html
-            output: web, pdf
-
       - title: Paper reviews
         output: web, pdf
         folderitems:
@@ -75,6 +64,24 @@ entries:
 
           - title: EDSR
             url: /EDSR.html
+            output: web, pdf
+
+      - title: Basic Activation Functions
+        output: web, pdf
+        folderitems:
+          - title: Sigmoid
+            url: /Sigmoid.html
+            output: web, pdf
+
+          - title: ReLU
+            url: /ReLU.html
+            output: web, pdf
+
+      - title: Optimization
+        output: web, pdf
+        folderitems:
+          - title: Knowledge Distillation
+            url: /KD.html
             output: web, pdf
 #     - title: 5.0 Release notes
 #       url: /mydoc_release_notes_50.html
